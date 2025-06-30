@@ -64,7 +64,7 @@ export default function AdminLayout({
             <div className='flex items-center gap-3'>
                 <Avatar>
                     <AvatarImage src="https://placehold.co/40x40.png" data-ai-hint="person portrait" />
-                    <AvatarFallback>AD</AvatarFallback>
+                    <AvatarFallback>AA</AvatarFallback>
                 </Avatar>
                 <div className='flex flex-col'>
                     <span className='text-sm font-semibold text-foreground'>{profileData.name}</span>

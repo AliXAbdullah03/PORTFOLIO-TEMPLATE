@@ -25,10 +25,10 @@ export interface Profile {
 }
 
 export const profileData: Profile = {
-  name: "Alex Doe",
+  name: "Ali Abdullah",
   bio: "A pioneering AI Engineer passionate about building intelligent systems that solve real-world problems. I specialize in large language models and generative AI.",
   contact: {
-    email: "alex.doe@example.com",
+    email: "ali.abdullah@example.com",
   },
   skills: ["Python", "PyTorch", "TensorFlow", "Genkit", "Next.js", "LangChain", "LLMs", "Generative AI"],
   socials: [
