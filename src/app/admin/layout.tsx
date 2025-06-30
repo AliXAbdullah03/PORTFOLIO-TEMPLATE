@@ -63,7 +63,7 @@ export default function AdminLayout({
         <SidebarFooter>
             <div className='flex items-center gap-3'>
                 <Avatar>
-                    <AvatarImage src="https://placehold.co/40x40.png" data-ai-hint="person portrait" />
+                    <AvatarImage src="/profile.jpg" alt={profileData.name} />
                     <AvatarFallback>AA</AvatarFallback>
                 </Avatar>
                 <div className='flex flex-col'>

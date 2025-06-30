@@ -9,7 +9,7 @@ export function ProfileSection() {
   return (
     <section id="profile" className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
       <Avatar className="w-32 h-32 md:w-40 md:h-40 border-4 border-primary shadow-lg">
-        <AvatarImage src="https://placehold.co/200x200.png" alt={profileData.name} data-ai-hint="person portrait" />
+        <AvatarImage src="/profile.jpg" alt={profileData.name} />
         <AvatarFallback>{profileData.name.charAt(0)}</AvatarFallback>
       </Avatar>
       <div className="text-center md:text-left">
