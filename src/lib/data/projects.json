@@ -1,55 +1,68 @@
 
 [
   {
-    "id": "c62e5e1e-2356-4c45-8120-41315f45381f",
-    "title": "AI-Powered Content Generation",
-    "description": "Developed a system that uses LLMs to generate high-quality marketing copy and articles. Integrated with a custom CMS for seamless content creation and management.",
+    "id": "c7f8e9d0-1b2c-3d4e-5f6a-7b8c9d0e1f2a",
+    "title": "Real-time Accident Detection",
+    "description": "A computer vision system that detects accidents in real-time using standard cameras, enhancing public safety and emergency response times.",
     "image": "https://placehold.co/1280x720.png",
-    "hint": "robot writing",
+    "hint": "traffic accident",
     "url": "#",
     "tags": [
-      "Generative AI",
-      "LLM",
-      "Content Creation"
+      "Computer Vision",
+      "Real-time Detection",
+      "OpenCV"
     ]
   },
   {
-    "id": "a9e6e0d2-7c6a-4b8e-9f0a-1e3d5b7c9a8b",
-    "title": "Intelligent Chatbot Assistant",
-    "description": "Built a conversational AI chatbot for customer support, capable of understanding context and providing accurate, human-like responses. Reduced support ticket volume by 40%.",
+    "id": "a1b2c3d4-e5f6-7a8b-9c0d-e1f2a3b4c5d6",
+    "title": "Sales-Generating AI Chatbot",
+    "description": "A custom AI chatbot that generates sales by understanding user behavior and engaging in persuasive, context-aware conversations.",
     "image": "https://placehold.co/1280x720.png",
-    "hint": "chatbot conversation",
+    "hint": "sales chatbot",
     "url": "#",
     "tags": [
       "Conversational AI",
       "NLP",
-      "Firebase"
+      "Sales Automation"
     ]
   },
   {
-    "id": "f3a4c5b6-8d9e-4f1a-b2c3-d4e5f6a7b8c9",
-    "title": "Image Recognition for Retail",
-    "description": "An AI model that identifies products on shelves to automate inventory management. Achieved 98% accuracy in identifying and counting items from images.",
+    "id": "b3c4d5e6-f7a8-b9c0-d1e2-f3a4b5c6d7e8",
+    "title": "Custom Image Generator for Marketing",
+    "description": "An AI-powered tool designed for marketing teams to generate on-brand, custom images for campaigns, social media, and advertisements instantly.",
     "image": "https://placehold.co/1280x720.png",
-    "hint": "retail analytics",
-    "url": "#",
-    "tags": [
-      "Computer Vision",
-      "PyTorch",
-      "Retail Tech"
-    ]
-  },
-  {
-    "id": "b1d2c3e4-5f6a-7b8c-9d0e-1f2a3b4c5d6e",
-    "title": "Generative Art Platform",
-    "description": "A web platform where users can generate unique pieces of art by providing text prompts. Utilizes diffusion models to create visually stunning images from descriptions.",
-    "image": "https://placehold.co/1280x720.png",
-    "hint": "abstract art",
+    "hint": "marketing design",
     "url": "#",
     "tags": [
       "Generative AI",
-      "Diffusion Models",
+      "Image Generation",
+      "Marketing Tech"
+    ]
+  },
+  {
+    "id": "d5e6f7a8-b9c0-d1e2-f3a4-b5c6d7e8f9a0",
+    "title": "AI CV Maker & HR Consultancy",
+    "description": "An intelligent platform that helps users create professional, optimized CVs and provides AI-driven HR consultancy features for job seekers.",
+    "image": "https://placehold.co/1280x720.png",
+    "hint": "resume builder",
+    "url": "#",
+    "tags": [
+      "AI",
+      "HR Tech",
       "Next.js"
+    ]
+  },
+  {
+    "id": "e7f8a9b0-c1d2-e3f4-a5b6-c7d8e9f0a1b2",
+    "title": "Speaking and Copying Avatar (TTS)",
+    "description": "A cutting-edge Text-to-Speech (TTS) avatar that can vocalize any provided text and realistically mimic different voice styles for dynamic applications.",
+    "image": "https://placehold.co/1280x720.png",
+    "hint": "speaking avatar",
+    "url": "#",
+    "tags": [
+      "TTS",
+      "Avatar",
+      "Generative AI"
     ]
   }
 ]
