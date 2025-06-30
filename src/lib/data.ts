@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { Github, Linkedin, Mail, Instagram } from 'lucide-react';
 import type { Icon } from 'lucide-react';
 
 export interface Project {
@@ -34,7 +34,7 @@ export const profileData: Profile = {
   socials: [
     { name: "GitHub", url: "https://github.com", icon: Github },
     { name: "LinkedIn", url: "https://linkedin.com", icon: Linkedin },
-    { name: "Twitter", url: "https://twitter.com", icon: Twitter },
+    { name: "Instagram", url: "https://instagram.com", icon: Instagram },
   ],
 };
 
