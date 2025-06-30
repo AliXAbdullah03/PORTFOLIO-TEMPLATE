@@ -2,9 +2,7 @@ import { ProfileSection } from '@/components/profile-section';
 import { ProjectsSection } from '@/components/projects-section';
 import { DynamicBackground } from '@/components/dynamic-background';
 import { profileData, getProjects } from '@/lib/data';
-import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
 
 export default async function Home() {
   const projectsData = await getProjects();
@@ -22,11 +20,6 @@ export default async function Home() {
           <Link href="/" className="font-headline text-2xl font-bold text-primary">
             ProfolioFlow
           </Link>
-          <Button asChild variant="ghost">
-            <Link href="/admin">
-              Admin Login <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
         </header>
 
         <div className="space-y-16 md:space-y-24 py-12 md:py-16">
