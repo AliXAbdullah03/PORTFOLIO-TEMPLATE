@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Mail } from 'lucide-react';
 import Link from 'next/link';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
+import { RequestQuoteDialog } from './request-quote-dialog';
 
 export function ProfileSection() {
   return (
@@ -23,7 +24,8 @@ export function ProfileSection() {
         </div>
 
         <div className="mt-8 flex flex-wrap justify-center md:justify-start items-center gap-4">
-          <Button asChild>
+          <RequestQuoteDialog />
+          <Button asChild variant="outline">
             <a href={`mailto:${profileData.contact.email}`}>
               <Mail className="mr-2 h-4 w-4" /> Contact Me
             </a>
