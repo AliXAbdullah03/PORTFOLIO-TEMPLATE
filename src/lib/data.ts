@@ -1,3 +1,4 @@
+
 import { Github, Linkedin, Mail, Instagram, type Icon } from 'lucide-react';
 import { promises as fs } from 'fs';
 import path from 'path';
@@ -35,9 +36,9 @@ export const profileData: Profile = {
   },
   skills: ["Python", "PyTorch", "TensorFlow", "Genkit", "Next.js", "LangChain", "LLMs", "Generative AI", "TypeScript", "TailwindCSS"],
   socials: [
-    { name: "GitHub", url: "https://github.com", icon: Github },
-    { name: "LinkedIn", url: "https://linkedin.com", icon: Linkedin },
-    { name: "Instagram", url: "https://instagram.com", icon: Instagram },
+    { name: "GitHub", url: "https://github.com/AliXAbdullah03", icon: Github },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/ali-abdullah-342b27357", icon: Linkedin },
+    { name: "Instagram", url: "https://www.instagram.com/simply.alphaa/", icon: Instagram },
   ],
 };
 
