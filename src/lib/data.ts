@@ -33,7 +33,7 @@ export const profileData: Profile = {
   contact: {
     email: "ali.abdullah@example.com",
   },
-  skills: ["Python", "PyTorch", "TensorFlow", "Genkit", "Next.js", "LangChain", "LLMs", "Generative AI"],
+  skills: ["Python", "PyTorch", "TensorFlow", "Genkit", "Next.js", "LangChain", "LLMs", "Generative AI", "TypeScript", "TailwindCSS"],
   socials: [
     { name: "GitHub", url: "https://github.com", icon: Github },
     { name: "LinkedIn", url: "https://linkedin.com", icon: Linkedin },
