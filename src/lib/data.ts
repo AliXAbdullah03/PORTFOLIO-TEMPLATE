@@ -1,7 +1,10 @@
-import { Github, Linkedin, Mail, Instagram } from 'lucide-react';
-import type { Icon } from 'lucide-react';
+import { Github, Linkedin, Mail, Instagram, type Icon } from 'lucide-react';
+import { promises as fs } from 'fs';
+import path from 'path';
+import { randomUUID } from 'crypto';
 
 export interface Project {
+  id: string;
   title: string;
   description: string;
   image: string;
@@ -38,37 +41,56 @@ export const profileData: Profile = {
   ],
 };
 
-export const projectsData: Project[] = [
-  {
-    title: "AI-Powered Content Generation",
-    description: "Developed a system that uses LLMs to generate high-quality marketing copy and articles. Integrated with a custom CMS for seamless content creation and management.",
-    image: "https://placehold.co/1280x720.png",
-    hint: "robot writing",
-    url: "#",
-    tags: ["Generative AI", "LLM", "Content Creation"],
-  },
-  {
-    title: "Intelligent Chatbot Assistant",
-    description: "Built a conversational AI chatbot for customer support, capable of understanding context and providing accurate, human-like responses. Reduced support ticket volume by 40%.",
-    image: "https://placehold.co/1280x720.png",
-    hint: "chatbot conversation",
-    url: "#",
-    tags: ["Conversational AI", "NLP", "Firebase"],
-  },
-  {
-    title: "Image Recognition for Retail",
-    description: "An AI model that identifies products on shelves to automate inventory management. Achieved 98% accuracy in identifying and counting items from images.",
-    image: "https://placehold.co/1280x720.png",
-    hint: "retail analytics",
-    url: "#",
-    tags: ["Computer Vision", "PyTorch", "Retail Tech"],
-  },
-  {
-    title: "Generative Art Platform",
-    description: "A web platform where users can generate unique pieces of art by providing text prompts. Utilizes diffusion models to create visually stunning images from descriptions.",
-    image: "https://placehold.co/1280x720.png",
-    hint: "abstract art",
-    url: "#",
-    tags: ["Generative AI", "Diffusion Models", "Next.js"],
-  },
-];
+const projectsFilePath = path.join(process.cwd(), 'src/lib/data/projects.json');
+
+async function readProjects(): Promise<Project[]> {
+  try {
+    const fileContent = await fs.readFile(projectsFilePath, 'utf-8');
+    return JSON.parse(fileContent);
+  } catch (error) {
+    // If the file doesn't exist, return an empty array
+    if (error instanceof Error && 'code' in error && error.code === 'ENOENT') {
+      return [];
+    }
+    throw error;
+  }
+}
+
+async function writeProjects(projects: Project[]): Promise<void> {
+  await fs.writeFile(projectsFilePath, JSON.stringify(projects, null, 2));
+}
+
+export async function getProjects(): Promise<Project[]> {
+  return await readProjects();
+}
+
+export async function getProjectById(id: string): Promise<Project | undefined> {
+  const projects = await readProjects();
+  return projects.find(p => p.id === id);
+}
+
+export async function saveProject(projectData: Omit<Project, 'id'> & { id?: string }): Promise<Project> {
+  const projects = await readProjects();
+  if (projectData.id) {
+    // Update existing project
+    const index = projects.findIndex(p => p.id === projectData.id);
+    if (index !== -1) {
+      projects[index] = { ...projects[index], ...projectData };
+      await writeProjects(projects);
+      return projects[index];
+    }
+    throw new Error('Project not found');
+  } else {
+    // Create new project
+    const newProject: Project = { ...projectData, id: randomUUID() };
+    projects.push(newProject);
+    await writeProjects(projects);
+    return newProject;
+  }
+}
+
+export async function deleteProjectById(id: string): Promise<void> {
+  const projects = await readProjects();
+  const updatedProjects = projects.filter(p => p.id !== id);
+  await writeProjects(updatedProjects);
+}

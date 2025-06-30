@@ -1,18 +1,24 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { projectsData } from '@/lib/data';
+import { getProjects } from '@/lib/data';
 import { MoreHorizontal, PlusCircle } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
+import Link from 'next/link';
+import { DeleteProjectButton } from '@/components/delete-project-button';
 
-export default function AdminProjectsPage() {
+export default async function AdminProjectsPage() {
+  const projects = await getProjects();
+
   return (
     <div className="space-y-6">
        <div className="flex items-center justify-between">
          <h1 className="text-3xl font-headline font-bold">Projects</h1>
-         <Button>
-           <PlusCircle className="mr-2 h-4 w-4" /> Add Project
+         <Button asChild>
+           <Link href="/admin/projects/new">
+             <PlusCircle className="mr-2 h-4 w-4" /> Add Project
+           </Link>
          </Button>
        </div>
 
@@ -33,8 +39,8 @@ export default function AdminProjectsPage() {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {projectsData.map((project) => (
-                <TableRow key={project.title}>
+              {projects.map((project) => (
+                <TableRow key={project.id}>
                   <TableCell className="font-medium">{project.title}</TableCell>
                   <TableCell>
                     <div className="flex flex-wrap gap-1">
@@ -52,9 +58,13 @@ export default function AdminProjectsPage() {
                       </DropdownMenuTrigger>
                       <DropdownMenuContent align="end">
                         <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                        <DropdownMenuItem>Edit</DropdownMenuItem>
-                        <DropdownMenuItem>View on site</DropdownMenuItem>
-                        <DropdownMenuItem className="text-destructive">Delete</DropdownMenuItem>
+                        <DropdownMenuItem asChild>
+                           <Link href={`/admin/projects/edit/${project.id}`}>Edit</Link>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem asChild>
+                           <Link href={project.url} target="_blank">View on site</Link>
+                        </DropdownMenuItem>
+                        <DeleteProjectButton projectId={project.id} />
                       </DropdownMenuContent>
                     </DropdownMenu>
                   </TableCell>

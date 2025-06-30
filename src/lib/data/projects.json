@@ -1,0 +1,55 @@
+
+[
+  {
+    "id": "c62e5e1e-2356-4c45-8120-41315f45381f",
+    "title": "AI-Powered Content Generation",
+    "description": "Developed a system that uses LLMs to generate high-quality marketing copy and articles. Integrated with a custom CMS for seamless content creation and management.",
+    "image": "https://placehold.co/1280x720.png",
+    "hint": "robot writing",
+    "url": "#",
+    "tags": [
+      "Generative AI",
+      "LLM",
+      "Content Creation"
+    ]
+  },
+  {
+    "id": "a9e6e0d2-7c6a-4b8e-9f0a-1e3d5b7c9a8b",
+    "title": "Intelligent Chatbot Assistant",
+    "description": "Built a conversational AI chatbot for customer support, capable of understanding context and providing accurate, human-like responses. Reduced support ticket volume by 40%.",
+    "image": "https://placehold.co/1280x720.png",
+    "hint": "chatbot conversation",
+    "url": "#",
+    "tags": [
+      "Conversational AI",
+      "NLP",
+      "Firebase"
+    ]
+  },
+  {
+    "id": "f3a4c5b6-8d9e-4f1a-b2c3-d4e5f6a7b8c9",
+    "title": "Image Recognition for Retail",
+    "description": "An AI model that identifies products on shelves to automate inventory management. Achieved 98% accuracy in identifying and counting items from images.",
+    "image": "https://placehold.co/1280x720.png",
+    "hint": "retail analytics",
+    "url": "#",
+    "tags": [
+      "Computer Vision",
+      "PyTorch",
+      "Retail Tech"
+    ]
+  },
+  {
+    "id": "b1d2c3e4-5f6a-7b8c-9d0e-1f2a3b4c5d6e",
+    "title": "Generative Art Platform",
+    "description": "A web platform where users can generate unique pieces of art by providing text prompts. Utilizes diffusion models to create visually stunning images from descriptions.",
+    "image": "https://placehold.co/1280x720.png",
+    "hint": "abstract art",
+    "url": "#",
+    "tags": [
+      "Generative AI",
+      "Diffusion Models",
+      "Next.js"
+    ]
+  }
+]
