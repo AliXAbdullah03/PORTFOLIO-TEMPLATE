@@ -2,7 +2,6 @@ import { ProfileSection } from '@/components/profile-section';
 import { ProjectsSection } from '@/components/projects-section';
 import { DynamicBackground } from '@/components/dynamic-background';
 import { profileData, getProjects } from '@/lib/data';
-import Link from 'next/link';
 
 export default async function Home() {
   const projectsData = await getProjects();
@@ -16,12 +15,6 @@ export default async function Home() {
     <>
       <DynamicBackground pageContent={pageContent} />
       <main className="container mx-auto px-4 md:px-6 z-10 flex-grow">
-        <header className="py-6 flex justify-between items-center">
-          <Link href="/" className="font-headline text-2xl font-bold text-primary">
-            ProfolioFlow
-          </Link>
-        </header>
-
         <div className="space-y-16 md:space-y-24 py-12 md:py-16">
           <ProfileSection />
           <ProjectsSection projects={projectsData} />
