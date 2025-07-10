@@ -63,7 +63,7 @@ export default function AdminLayout({
         <SidebarFooter>
             <div className='flex items-center gap-3'>
                 <Avatar>
-                    <AvatarImage src="/profile.jpg" alt={profileData.name} />
+                    <AvatarImage src="/profile.jpg" alt={profileData.name} className="object-cover" />
                     <AvatarFallback>AA</AvatarFallback>
                 </Avatar>
                 <div className='flex flex-col'>
