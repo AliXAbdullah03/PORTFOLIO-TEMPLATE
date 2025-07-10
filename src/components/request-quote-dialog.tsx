@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { useFormState, useFormStatus } from 'react-dom';
+import { useState, useEffect, useActionState } from 'react';
+import { useFormStatus } from 'react-dom';
 import { Button } from '@/components/ui/button';
 import {
   Dialog,
@@ -30,7 +30,7 @@ function SubmitButton() {
 
 export function RequestQuoteDialog() {
   const [open, setOpen] = useState(false);
-  const [state, formAction] = useFormState(handleQuoteRequest, null);
+  const [state, formAction] = useActionState(handleQuoteRequest, null);
 
   useEffect(() => {
     if (state?.success) {
