@@ -4,7 +4,7 @@
     "id": "c7f8e9d0-1b2c-3d4e-5f6a-7b8c9d0e1f2a",
     "title": "Real-time Accident Detection",
     "description": "A computer vision system that detects accidents in real-time using standard cameras, enhancing public safety and emergency response times.",
-    "image": "https://placehold.co/1280x720.png",
+    "image": "/accident.jpeg",
     "hint": "traffic accident",
     "url": "#",
     "tags": [
@@ -17,7 +17,7 @@
     "id": "a1b2c3d4-e5f6-7a8b-9c0d-e1f2a3b4c5d6",
     "title": "Sales-Generating AI Chatbot",
     "description": "A custom AI chatbot that generates sales by understanding user behavior and engaging in persuasive, context-aware conversations.",
-    "image": "/images/chatbot.png",
+    "image": "/chatbot.jpeg",
     "hint": "sales chatbot",
     "url": "#",
     "tags": [
@@ -30,7 +30,7 @@
     "id": "b3c4d5e6-f7a8-b9c0-d1e2-f3a4b5c6d7e8",
     "title": "Custom Image Generator for Marketing",
     "description": "An AI-powered tool designed for marketing teams to generate on-brand, custom images for campaigns, social media, and advertisements instantly.",
-    "image": "/images/imgen.png",
+    "image": "/imagegen.jpeg",
     "hint": "marketing design",
     "url": "#",
     "tags": [
@@ -43,7 +43,7 @@
     "id": "d5e6f7a8-b9c0-d1e2-f3a4-b5c6d7e8f9a0",
     "title": "AI CV Maker & HR Consultancy",
     "description": "An intelligent platform that helps users create professional, optimized CVs and provides AI-driven HR consultancy features for job seekers.",
-    "image": "/images/hr.png",
+    "image": "/CV.jpeg",
     "hint": "resume builder",
     "url": "#",
     "tags": [
@@ -56,7 +56,7 @@
     "id": "e7f8a9b0-c1d2-e3f4-a5b6-c7d8e9f0a1b2",
     "title": "Speaking and Copying Avatar (TTS)",
     "description": "A cutting-edge Text-to-Speech (TTS) avatar that can vocalize any provided text and realistically mimic different voice styles for dynamic applications.",
-    "image": "/images/avatar.png",
+    "image": "/avatar.jpeg",
     "hint": "speaking avatar",
     "url": "#",
     "tags": [
